@@ -2,7 +2,7 @@
   "name": "libpipeline",
   "version": "0.0.5",
   "description": "Simple library for creating asynchronous pipeline",
-  "main": "src/pipeline.js",
+  "main": "src/index.js",
   "directories": {
     "test": "test"
   },

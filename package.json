@@ -1,0 +1,5 @@
+{
+  "name": "libpipeline",
+  "version": "0.0.1",
+  "description": "Simple library for creating asynchronous pipeline"
+}

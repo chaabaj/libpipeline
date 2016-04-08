@@ -1,5 +1,26 @@
 {
   "name": "libpipeline",
-  "version": "0.0.1",
-  "description": "Simple library for creating asynchronous pipeline"
+  "version": "0.0.2",
+  "description": "Simple library for creating asynchronous pipeline",
+  "main": "src/pipeline.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaabaj/libpipeline.git"
+  },
+  "keywords": [
+    "async",
+    "pipeline"
+  ],
+  "author": "chaabaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaabaj/libpipeline/issues"
+  },
+  "homepage": "https://github.com/chaabaj/libpipeline#readme"
 }

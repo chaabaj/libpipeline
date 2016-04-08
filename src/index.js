@@ -21,8 +21,4 @@
  * SOFTWARE.
  */
 
-const sinks = function(param) {
-    arguments.forEach((fn) => fn(param));
-};
-
-module.exports = sinks;
+module.exports = require('./pipeline');

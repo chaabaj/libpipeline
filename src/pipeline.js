@@ -49,7 +49,14 @@ const pipeline = function() {
             result.then((value) => _executeNext(fns[pos](value), pos + 1, future))
                   .catch(future.reject);
         } else {
-            defer(() => _executeNext(fns[pos](result), pos + 1, future));
+            defer(() => {
+                try {
+                    _executeNext(fns[pos](result), pos + 1, future);
+                }
+                catch(err) {
+                    future.reject(err);
+                }
+            });
         }
     };
 

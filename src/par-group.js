@@ -21,7 +21,18 @@
  * SOFTWARE.
  */
 
-module.exports = {
-    Pipeline : require('./pipeline'),
-    ParGroup : require('./par-group')
+const ParGroup = function() {
+    const fns = arguments;
+
+    return (value) => {
+        const promises = Array.prototype.map.apply(fns, [(fn, index) => {
+            return new Promise((resolve) => {
+                resolve(fn({index, value}));
+            });
+        }]);
+        
+        return Promise.all(promises);
+    };
 };
+
+module.exports = ParGroup;

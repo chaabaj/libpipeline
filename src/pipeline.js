@@ -24,15 +24,15 @@
 const defer = require('./async').defer;
 
 /**
- * @desc create a new pipeline with the function passed in parameters
+ * @desc create a new Pipeline with the function passed in parameters
  * @returns {function()}
  */
-const pipeline = function() {
+const Pipeline = function() {
 
     const fns = arguments;
 
     if (fns.length === 0) {
-        throw new Error("Empty pipeline is not a defined behavior");
+        throw new Error("Empty Pipeline is not a defined behavior");
     }
 
     /**
@@ -67,4 +67,4 @@ const pipeline = function() {
     };
 };
 
-module.exports = pipeline;
+module.exports = Pipeline;

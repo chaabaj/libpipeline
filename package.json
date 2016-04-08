@@ -15,7 +15,8 @@
   },
   "keywords": [
     "async",
-    "pipeline"
+    "pipeline",
+    "parallel"
   ],
   "author": "chaabaj",
   "license": "MIT",
